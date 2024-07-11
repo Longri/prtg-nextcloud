@@ -14,13 +14,4 @@
 	<dependencies>
 		<nextcloud min-version="29" max-version="29"/>
 	</dependencies>
-	<navigations>
-		<navigation>
-			<id>prtgnextcloud</id>
-			<name>Prtg Nextcloud</name>
-			<route>prtgnextcloud.page.index</route>
-			<icon>app.svg</icon>
-			<type>link</type>
-		</navigation>
-	</navigations>
 </info>
