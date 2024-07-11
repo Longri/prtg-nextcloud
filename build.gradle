@@ -16,7 +16,7 @@ repositories {
 }
 
 dependencies {
-    implementation 'de.longri:PRTG-XML:1.7.2'
+    implementation 'de.longri:PRTG-XML:1.8.1'
 
 
     testImplementation platform('org.junit:junit-bom:5.11.0-M2')
@@ -41,3 +41,34 @@ task _FAT_JAR(dependsOn: test, type: Jar) {
     }
     with jar
 }
+
+// Task for renaming and copying the JAR file
+task renameAndCopyJar(dependsOn: _FAT_JAR) {
+    doLast {
+        def jarFile = file('build/libs/PRTG-Nextcloud-1.0.jar')
+        def targetDir = file('src/php/prtgnextcloud')
+        def newJarName = 'PRTG-Nextcloud.jar'
+        def newJarFile = file("${targetDir}/${newJarName}")
+
+        if (jarFile.exists()) {
+            copy {
+                from jarFile
+                into targetDir
+                rename { newJarName }
+            }
+            println "Jar file copied and renamed to ${newJarFile}"
+        } else {
+            println "Jar file not found: ${jarFile}"
+        }
+    }
+}
+
+// Task to create the ZIP file
+task zipPhpDir(dependsOn: renameAndCopyJar, type: Zip) {
+    from 'src/php/prtgnextcloud'
+    archiveFileName = 'prtgnextcloud.zip'
+    destinationDirectory = file('src/php')
+}
+
+// Main task to run everything
+task _GENERATE_FOR_PLUGIN(dependsOn: [_FAT_JAR, renameAndCopyJar, zipPhpDir])

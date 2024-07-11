@@ -62,7 +62,7 @@ public class Main {
                     user = user.substring(pos);
                 }
 
-                new HDD_Channel(user);
+//                new HDD_Channel(user);
 
                 SENSOR.addChannel(new UserUsage(user, msgBilder));
             }
@@ -91,9 +91,7 @@ public class Main {
                         long used = total - f.getFreeSpace();
 
                         HDD_Channel hddChannel = new HDD_Channel(name);
-
-                        float percent = ((float) used / (float) total) * 100.0f;
-                        hddChannel.setValue(percent, 100);
+                        hddChannel.setValue((double) used, (double) total);
 
                         SENSOR.addChannel(hddChannel);
                     }

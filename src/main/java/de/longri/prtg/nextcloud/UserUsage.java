@@ -45,10 +45,12 @@ The CSV data is the following:
 
 
  */
+
+import de.longri.prtg.xml.Util;
 import de.longri.prtg.xml.tags.HDD_Channel;
 
 
-public class UserUsage extends HDD_Channel  {
+public class UserUsage extends HDD_Channel {
 
     private static String[] getValues(String occValues) {
         String[] values = occValues.split(",");
@@ -68,12 +70,12 @@ public class UserUsage extends HDD_Channel  {
             bytesAssigned = Long.parseLong(values[3].replace("\"", "").trim());
         }
 
-
+        long usageBytes = Long.parseLong(values[4].replace("\"", "").trim());
         if (bytesAssigned > 0) {
-            long usageBytes = Long.parseLong(values[4].replace("\"", "").trim());
-            setValue(((double) usageBytes / (double) bytesAssigned) * 100.0f);
+            setValue((double) usageBytes, (double) bytesAssigned);
         } else {
-            setValue((float) 0);
+            setValue((double) 0);
+            setTEXT(Util.formatBytes(usageBytes) + " / ∞");
         }
 
     }

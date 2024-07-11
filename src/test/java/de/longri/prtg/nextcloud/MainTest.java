@@ -80,6 +80,7 @@ public class MainTest {
                 "\t\t<showChart>1</showChart>\n" +
                 "\t\t<showTable>1</showTable>\n" +
                 "\t\t<warning>0</warning>\n" +
+                "\t\t<Text>0,00 Bytes/1,00 GB</Text>\n" +
                 "\t\t<LimitMode>1</LimitMode>\n" +
                 "\t\t<LimitMaxError>90</LimitMaxError>\n" +
                 "\t\t<LimitMaxWarning>75</LimitMaxWarning>\n" +
@@ -95,6 +96,7 @@ public class MainTest {
                 "\t\t<showChart>1</showChart>\n" +
                 "\t\t<showTable>1</showTable>\n" +
                 "\t\t<warning>0</warning>\n" +
+                "\t\t<Text>0,00 Bytes/1,00 GB</Text>\n" +
                 "\t\t<LimitMode>1</LimitMode>\n" +
                 "\t\t<LimitMaxError>90</LimitMaxError>\n" +
                 "\t\t<LimitMaxWarning>75</LimitMaxWarning>\n" +
@@ -110,6 +112,7 @@ public class MainTest {
                 "\t\t<showChart>1</showChart>\n" +
                 "\t\t<showTable>1</showTable>\n" +
                 "\t\t<warning>0</warning>\n" +
+                "\t\t<Text>0,00 Bytes/1,00 GB</Text>\n" +
                 "\t\t<LimitMode>1</LimitMode>\n" +
                 "\t\t<LimitMaxError>90</LimitMaxError>\n" +
                 "\t\t<LimitMaxWarning>75</LimitMaxWarning>\n" +
@@ -125,6 +128,7 @@ public class MainTest {
                 "\t\t<showChart>1</showChart>\n" +
                 "\t\t<showTable>1</showTable>\n" +
                 "\t\t<warning>0</warning>\n" +
+                "\t\t<Text>189,16 MB/20,00 GB</Text>\n" +
                 "\t\t<LimitMode>1</LimitMode>\n" +
                 "\t\t<LimitMaxError>90</LimitMaxError>\n" +
                 "\t\t<LimitMaxWarning>75</LimitMaxWarning>\n" +
@@ -140,6 +144,7 @@ public class MainTest {
                 "\t\t<showChart>1</showChart>\n" +
                 "\t\t<showTable>1</showTable>\n" +
                 "\t\t<warning>0</warning>\n" +
+                "\t\t<Text>13,47 GB/30,00 GB</Text>\n" +
                 "\t\t<LimitMode>1</LimitMode>\n" +
                 "\t\t<LimitMaxError>90</LimitMaxError>\n" +
                 "\t\t<LimitMaxWarning>75</LimitMaxWarning>\n" +
@@ -155,6 +160,7 @@ public class MainTest {
                 "\t\t<showChart>1</showChart>\n" +
                 "\t\t<showTable>1</showTable>\n" +
                 "\t\t<warning>0</warning>\n" +
+                "\t\t<Text>24,57 MB/1,00 GB</Text>\n" +
                 "\t\t<LimitMode>1</LimitMode>\n" +
                 "\t\t<LimitMaxError>90</LimitMaxError>\n" +
                 "\t\t<LimitMaxWarning>75</LimitMaxWarning>\n" +
@@ -170,6 +176,7 @@ public class MainTest {
                 "\t\t<showChart>1</showChart>\n" +
                 "\t\t<showTable>1</showTable>\n" +
                 "\t\t<warning>0</warning>\n" +
+                "\t\t<Text>0,00 Bytes/1,00 GB</Text>\n" +
                 "\t\t<LimitMode>1</LimitMode>\n" +
                 "\t\t<LimitMaxError>90</LimitMaxError>\n" +
                 "\t\t<LimitMaxWarning>75</LimitMaxWarning>\n" +
